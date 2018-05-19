@@ -15,10 +15,10 @@ import ui.StartScreen;
 public class AppletMain extends Applet implements KeyListener {
 	
 	/** The Constant serialVersionUID. */
-	private static final long serialVersionUID = 2560255315130084198L;
+	private  final long serialVersionUID = 2560255315130084198L;
 	
 	/** The terminal. */
-	private AsciiPanel terminal;
+	private final AsciiPanel terminal;
 	
 	/** The screen. */
 	private Screen screen;
