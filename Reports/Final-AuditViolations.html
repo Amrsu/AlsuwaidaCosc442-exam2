@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>CodePro Code Audit for game</title>
+
+	<meta name="GENERATOR" content="CodePro Server"/>
+
+	<style type="text/css">
+	.highSeverity { background-color: #ff9999; }
+	.mediumSeverity { }
+	.lowSeverity { }
+	</style>
+
+	<style type="text/css">
+	body {font: 70% verdana,arial,helvetica; color: #000000}
+p  {margin-top:  3px; line-height: 1.5em}
+h1 {margin-top:  0px; margin-bottom: 6px; font: bold 150% verdana,arial,helvetica}
+h2 {margin-top: 12px; margin-bottom: 6px; font: bold 125% verdana,arial,helvetica}
+h3 {margin-top: 12px; margin-bottom: 6px; font: bold 100% verdana,arial,helvetica}
+h4 {margin-top: 12px; margin-bottom: 6px; font: bold 100% verdana,arial,helvetica}
+.rounded_page{display:block}
+.rounded_page *{display:block; height:1px; overflow:hidden; font-size:.01em; background:#7799DD}
+.rounded_page1{ margin-left:3px; margin-right:3px; padding-left:1px; padding-right:1px; border-left:1px solid #c4d3ef; border-right:1px solid #c4d3ef; background:#99b2e5}
+.rounded_page2{ margin-left:1px; margin-right:1px; padding-right:1px; padding-left:1px; border-left:1px solid #f1f4fa; border-right:1px solid #f1f4fa; background:#90ace3}
+.rounded_page3{ margin-left:1px; margin-right:1px; border-left:1px solid #90ace3; border-right:1px solid #90ace3;}
+.rounded_page4{ border-left:1px solid #c4d3ef; border-right:1px solid #c4d3ef}
+.rounded_page5{ border-left:1px solid #99b2e5; border-right:1px solid #99b2e5}
+.rounded_pagefg{ background:#7799DD}
+.rounded_section{display:block}
+.rounded_section *{display:block; height:1px; overflow:hidden; font-size:.01em; background:#C3D9FF}
+.rounded_section1{ margin-left:3px; margin-right:3px; padding-left:1px; padding-right:1px; border-left:1px solid #e5eefe; border-right:1px solid #e5eefe; background:#d2e2fe}
+.rounded_section2{ margin-left:1px; margin-right:1px; padding-right:1px; padding-left:1px; border-left:1px solid #f9fbfe; border-right:1px solid #f9fbfe; background:#cee0fe}
+.rounded_section3{ margin-left:1px; margin-right:1px; border-left:1px solid #cee0fe; border-right:1px solid #cee0fe;}
+.rounded_section4{ border-left:1px solid #e5eefe; border-right:1px solid #e5eefe}
+.rounded_section5{ border-left:1px solid #d2e2fe; border-right:1px solid #d2e2fe}
+.rounded_sectionfg{ background:#C3D9FF}
+.page-title { color: #FFFFFE; font-weight: bold; font-size: large; margin: 0px 0px 0px 8px; }
+.page-title-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.page-footer { color: #FFFFFE; font-weight: bold; margin-left: 8px}
+.page-footer-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.majorsection-title { color: #FFFFFE; font-weight: bold; margin: 0px 0px 0px 8px; }
+.majorsection-title-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.majorsection-contents { margin: 0px 0px 15px 16px; }
+.section-title { color: #1F4F8F; font-weight: bold; margin: 0px 0px 0px 6px; }
+.section-title-details { font-weight: bold; margin-left: 6px; margin-right: 6px; }
+.section-contents { margin: 6px 0px 15px 14px; }
+.bodyTable { border: 0px solid #777777; width:100%; border-collapse: collapse; }
+.bodyTable th { border: 1px solid #777777; white-space:nowrap; background-color: #EEEEEE; padding-left: 3px; padding-right: 3px; }
+.bodyTable td { border: 1px solid #777777; vertical-align: top; padding-left: 3px; padding-right: 3px; }
+td[class=emptyborder] { border: 0px solid #777777; padding: 3px 0px 3px 0px; }
+
+	</style>
+
+</head>
+
+<body>
+
+<div>
+		<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+		<div class="rounded_pagefg">
+			<h2 class="page-title"><a name="top">CodePro Code Audit for game</a></h2>
+		</div>
+		<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+	</div>
+	<div class="majorsection-contents">
+		<p>This document contains the results of auditing game at 5/19/18 1:20 AM, using the audit rule set Security.</p>
+	</div>
+	<table width="100%" border="0">
+		<tr>
+			<td valign="top" width="68%">
+				<div>
+					<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+					<div class="rounded_pagefg">
+						<h3 class="majorsection-title">Violations by Audit Rule</h3>
+					</div>
+					<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+				</div>
+				<div class="section-contents">
+					<table>
+					<tr>
+					<td valign="top"><a href="#Applet_Field_Security">Applet Field Security</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Instance_Field_Security">Instance Field Security</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Avoid_Inner_Classes">Avoid Inner Classes</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Mutability_Of_Arrays">Mutability Of Arrays</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Avoid_Package_Scope">Avoid Package Scope</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Serializeability_Security">Serializeability Security</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Deserializeability_Security">Deserializeability Security</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Too_Many_Violations">Too Many Violations</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Don't_Return_Mutable_Types">Don&apos;t Return Mutable Types</a>
+					</td>	<td width="10"/>
+					<td valign="top"><a href="#Use_of_Random">Use of Random</a>
+					</td></tr>
+					<tr>
+					<td valign="top"><a href="#Enforce_Cloneable_Usage">Enforce Cloneable Usage</a>
+					</td>	<td width="10"/>
+					<td valign="top">&nbsp;</td>
+					</tr>
+					</table>
+				</div>
+			</td>
+			<td width="2%">
+				 </td>
+			<td valign="top" width="30%">
+				<div>
+					<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+					<div class="rounded_pagefg">
+						<h3 class="majorsection-title">Violation Counts by Severity</h3>
+					</div>
+					<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+				</div>
+				<div class="section-contents">
+					<table class="bodyTable">
+						<tr><th>Violation Severity</th><th>Violation Count</th></tr>
+						<tr class="a"><td>High</td><td align="right">1</td></tr>
+						<tr class="b"><td>Medium</td><td align="right">169</td></tr>
+						<tr class="a"><td>Low</td><td align="right">0</td></tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="section-contents">
+		<table class="bodyTable">
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Applet_Field_Security">Applet Field Security (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/AppletMain.html#line23">Applet fields should be final</a></td>
+<td>
+Declare the field final		</td>
+<td>Medium</td>
+<td>
+AppletMain.java</td>
+<td>
+23</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Avoid_Inner_Classes">Avoid Inner Classes (22)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line14">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+14</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/LevelUpController.html#line20">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line26">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+26</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/LevelUpController.html#line31">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+31</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line36">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+36</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/LevelUpController.html#line41">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line46">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+46</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line327">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+327</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line350">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+350</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line373">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+373</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line397">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+397</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line421">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+421</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line447">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+447</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line471">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+471</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line510">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+510</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line520">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+520</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line530">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+530</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line537">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+537</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line573">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+573</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line581">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+581</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line602">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+602</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line629">Anonymous class found</a></td>
+<td>
+Make anonymous class into a non-inner class, and supply the needed get and set methods to access data.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+629</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Avoid_Package_Scope">Avoid Package Scope (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Tile.html#line67">Constructor with package scope</a></td>
+<td>
+Declare the constructor public		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+67</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Deserializeability_Security">Deserializeability Security (24)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/AppletMain.html#line15">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+AppletMain.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/ApplicationMain.html#line15">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+ApplicationMain.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/BatAi.html#line7">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+BatAi.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line12">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/CreatureAi.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/EatScreen.html#line10">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+EatScreen.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Effect.html#line7">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Effect.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/FieldOfView.html#line7">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/FungusAi.html#line7">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/GoblinAi.html#line8">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Inventory.html#line6">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+6</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Item.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line10">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/LevelUpOption.html#line7">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+LevelUpOption.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Line.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Path.html#line9">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Path.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/PathFinder.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/PlayerAi.html#line9">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Point.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Spell.html#line7">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+Spell.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line17">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line11">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/ZombieAi.html#line8">readObject method missing</a></td>
+<td>
+Implement a readObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+8</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Don't_Return_Mutable_Types">Don&apos;t Return Mutable Types (63)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line44">Mutable type &quot;java.awt.Color&quot; declared as the return type</a></td>
+<td>
+Declare the type java.awt.Color to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+44</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line160">Mutable type &quot;game.Inventory&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Inventory to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+160</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line190">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+190</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line200">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+200</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line261">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+261</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line642">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+642</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line701">Mutable type &quot;game.Tile&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Tile to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+701</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line713">Mutable type &quot;game.Tile&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Tile to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+713</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line728">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+728</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line948">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+948</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/CreatureAi.html#line140">Mutable type &quot;game.Tile&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Tile to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+140</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/CreatureAi.html#line160">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+160</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/EatScreen.html#line41">Mutable type &quot;ui.Screen&quot; declared as the return type</a></td>
+<td>
+Declare the type ui.Screen to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+EatScreen.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/FieldOfView.html#line41">Mutable type &quot;game.Tile&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Tile to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+41</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Inventory.html#line17">Mutable type &quot;[Lgame.Item;&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Inventory.html#line24">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+24</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Item.html#line31">Mutable type &quot;java.awt.Color&quot; declared as the return type</a></td>
+<td>
+Declare the type java.awt.Color to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+31</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Item.html#line146">Mutable type &quot;game.Effect&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Effect to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+146</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Item.html#line163">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+163</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/LevelUpController.html#line67">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+67</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line81">Mutable type &quot;game.LevelUpOption&quot; declared as the return type</a></td>
+<td>
+Declare the type game.LevelUpOption to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+81</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Line.html#line21">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+21</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Line.html#line63">Mutable type &quot;java.util.Iterator&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.Iterator to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+63</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Path.html#line22">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Path.java</td>
+<td>
+22</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/PathFinder.html#line92">Mutable type &quot;java.util.ArrayList&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.ArrayList to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+92</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/PathFinder.html#line120">Mutable type &quot;game.Point&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Point to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+120</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/PathFinder.html#line186">Mutable type &quot;java.util.ArrayList&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.ArrayList to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+186</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/PlayerAi.html#line71">Mutable type &quot;game.Tile&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Tile to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+71</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Point.html#line74">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+74</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Spell.html#line37">Mutable type &quot;game.Effect&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Effect to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Spell.java</td>
+<td>
+37</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line65">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+65</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line78">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+78</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line91">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+91</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line105">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+105</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line119">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+119</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line134">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+134</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line147">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+147</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line159">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+159</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line172">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+172</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line185">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+185</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line199">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+199</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line213">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+213</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line228">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+228</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line242">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+242</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line256">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+256</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line269">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+269</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line282">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+282</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line295">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+295</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line310">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+310</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line324">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+324</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Tile.html#line48">Mutable type &quot;java.awt.Color&quot; declared as the return type</a></td>
+<td>
+Declare the type java.awt.Color to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+Tile.java</td>
+<td>
+48</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line74">Mutable type &quot;game.Creature&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Creature to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+74</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/World.html#line90">Mutable type &quot;game.Tile&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Tile to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+90</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line124">Mutable type &quot;java.awt.Color&quot; declared as the return type</a></td>
+<td>
+Declare the type java.awt.Color to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+124</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/World.html#line214">Mutable type &quot;game.Item&quot; declared as the return type</a></td>
+<td>
+Declare the type game.Item to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+214</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line52">Mutable type &quot;game.World&quot; declared as the return type</a></td>
+<td>
+Declare the type game.World to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+52</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line61">Mutable type &quot;game.WorldBuilder&quot; declared as the return type</a></td>
+<td>
+Declare the type game.WorldBuilder to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+61</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line78">Mutable type &quot;game.WorldBuilder&quot; declared as the return type</a></td>
+<td>
+Declare the type game.WorldBuilder to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+78</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line114">Mutable type &quot;game.WorldBuilder&quot; declared as the return type</a></td>
+<td>
+Declare the type game.WorldBuilder to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+114</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line188">Mutable type &quot;game.WorldBuilder&quot; declared as the return type</a></td>
+<td>
+Declare the type game.WorldBuilder to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+188</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line244">Mutable type &quot;java.util.List&quot; declared as the return type</a></td>
+<td>
+Declare the type java.util.List to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+244</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line267">Mutable type &quot;game.WorldBuilder&quot; declared as the return type</a></td>
+<td>
+Declare the type game.WorldBuilder to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+267</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line286">Mutable type &quot;game.WorldBuilder&quot; declared as the return type</a></td>
+<td>
+Declare the type game.WorldBuilder to be immutable. The type will be treated as such by all audit rules.		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+286</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Enforce_Cloneable_Usage">Enforce Cloneable Usage (24)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/AppletMain.html#line15">&quot;AppletMain&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+AppletMain.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/ApplicationMain.html#line15">&quot;ApplicationMain&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+ApplicationMain.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/BatAi.html#line7">&quot;BatAi&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+BatAi.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line12">&quot;Creature&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+12</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/CreatureAi.html#line11">&quot;CreatureAi&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/EatScreen.html#line10">&quot;EatScreen&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+EatScreen.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Effect.html#line7">&quot;Effect&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Effect.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/FieldOfView.html#line7">&quot;FieldOfView&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+FieldOfView.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/FungusAi.html#line7">&quot;FungusAi&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/GoblinAi.html#line8">&quot;GoblinAi&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+GoblinAi.java</td>
+<td>
+8</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Inventory.html#line6">&quot;Inventory&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+6</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Item.html#line11">&quot;Item&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Item.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line10">&quot;LevelUpController&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+10</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/LevelUpOption.html#line7">&quot;LevelUpOption&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+LevelUpOption.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Line.html#line11">&quot;Line&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Line.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Path.html#line9">&quot;Path&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Path.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/PathFinder.html#line11">&quot;PathFinder&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+PathFinder.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/PlayerAi.html#line9">&quot;PlayerAi&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+PlayerAi.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Point.html#line11">&quot;Point&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Spell.html#line7">&quot;Spell&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+Spell.java</td>
+<td>
+7</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line17">&quot;StuffFactory&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line11">&quot;World&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line11">&quot;WorldBuilder&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+11</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/ZombieAi.html#line8">&quot;ZombieAi&quot; does not override clone()</a></td>
+<td>
+Override clone().		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+8</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Instance_Field_Security">Instance Field Security (8)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line17">Non-final public instance field: &quot;x&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Creature.html#line20">Non-final public instance field: &quot;y&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+20</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line23">Non-final public instance field: &quot;z&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+23</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/CreatureAi.html#line13">Non-final protected instance field: &quot;creature&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+13</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Effect.html#line9">Non-final protected instance field: &quot;duration&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Effect.java</td>
+<td>
+9</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Point.html#line13">Non-final public instance field: &quot;x&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+13</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Point.html#line16">Non-final public instance field: &quot;y&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+16</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/Point.html#line19">Non-final public instance field: &quot;z&quot;</a></td>
+<td>
+Change field from non-final to final.		</td>
+<td>Medium</td>
+<td>
+Point.java</td>
+<td>
+19</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Mutability_Of_Arrays">Mutability Of Arrays (2)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Inventory.html#line17">Found a non-private method returning an internal array</a></td>
+<td>
+Do not return this internal array directly.		</td>
+<td>Medium</td>
+<td>
+Inventory.java</td>
+<td>
+17</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line58">Found a non-private method setting an internal array</a></td>
+<td>
+Do not set this internal array directly.		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+58</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Serializeability_Security">Serializeability Security (2)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/AppletMain.html#line15">writeObject method missing</a></td>
+<td>
+Implement a writeObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+AppletMain.java</td>
+<td>
+15</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/ApplicationMain.html#line15">writeObject method missing</a></td>
+<td>
+Implement a writeObject method that matches signature in java.io.Serializable.		</td>
+<td>Medium</td>
+<td>
+ApplicationMain.java</td>
+<td>
+15</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Too_Many_Violations">Too Many Violations (1)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="highSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line1">Maximum violation count of 20 exceeded for the rule &quot;Don't Return Mutable Types&quot; in &quot;/JoshHack/src/game/StuffFactory.java&quot;</a></td>
+<td>
+&nbsp;
+		</td>
+<td>High</td>
+<td>
+StuffFactory.java</td>
+<td>
+1</td>
+</tr>
+			<tr><td class="emptyborder" colspan="5"> </td></tr>
+			<tr><td class="emptyborder" colspan="5">&nbsp;
+			<div>
+				<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+				<div class="rounded_sectionfg">
+					<h4 class="section-title"><a name="Use_of_Random">Use of Random (22)</a></h4>
+				</div>
+				<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+			</div>
+			</td></tr>
+			<tr><td class="emptyborder" colspan="5"></td></tr>
+	<tr class="a">
+			<th>Violation</th>
+<th>Recommendation</th>
+<th>Severity</th>
+<th>Resource</th>
+<th>Line</th>
+	</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/Creature.html#line446">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+Creature.java</td>
+<td>
+446</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/CreatureAi.html#line113">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+113</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/CreatureAi.html#line114">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+CreatureAi.java</td>
+<td>
+114</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/FungusAi.html#line30">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+30</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/FungusAi.html#line38">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+38</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/FungusAi.html#line39">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+FungusAi.java</td>
+<td>
+39</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/LevelUpController.html#line59">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+LevelUpController.java</td>
+<td>
+59</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line296">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+296</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line311">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+311</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line489">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+489</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line548">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+548</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line590">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+590</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/StuffFactory.html#line591">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+591</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/StuffFactory.html#line650">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+StuffFactory.java</td>
+<td>
+650</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/World.html#line158">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+158</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line159">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+159</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/World.html#line229">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+229</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/World.html#line230">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+World.java</td>
+<td>
+230</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line65">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+65</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line272">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+272</td>
+</tr>
+	<tr class="mediumSeverity a"><td><a href="Final-AuditViolations_files/WorldBuilder.html#line273">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+WorldBuilder.java</td>
+<td>
+273</td>
+</tr>
+	<tr class="mediumSeverity b"><td><a href="Final-AuditViolations_files/ZombieAi.html#line28">Invocation of Math.random() found</a></td>
+<td>
+Do not invoke Math.random().		</td>
+<td>Medium</td>
+<td>
+ZombieAi.java</td>
+<td>
+28</td>
+</tr>
+		</table>
+	</div>
+	<div>
+		<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+		<div class="rounded_pagefg">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" ><tr><td valign="middle">
+			<span class="page-footer">Generated at 5/19/18 1:20 AM</span>
+			</td><td align="right" valign="middle">
+			<span class="page-footer-details">Powered by <span title="0.0.0, UNKNOWN">CodePro Server</span></span></td></tr></table>
+		</div>
+		<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,2313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Item.java</title>
+
+	<meta name="GENERATOR" content="CodePro Server"/>
+
+	<style type="text/css">
+	span.highSeverity {background-color: #FFAAAA; font: bold}
+span.mediumSeverity {background-color: #FFFF77; font: bold}
+span.lowSeverity {background-color: #AAAAFF; font: bold}
+table.code {border-spacing: 0; border-collapse: collapse; border-width: 1px 0 1px 1px; }
+table.code td {padding-left: 0.25em; padding-right: 0.25em; font-family: courier,monospace; font-size: 10pt; border-style: solid; border-color: black;}
+tr.first td.flags {border-width: 1px 1px 0 1px; text-align: right;}
+tr.first td.lineNumber {border-width: 1px 1px 0 1px; text-align: right;}
+tr.first td.sourceLine {border-width: 1px 1px 0 1px; background-color: #F0F0FF;}
+tr.middle td.flags {border-width: 0 1px 0 1px; text-align: right;}
+tr.middle td.lineNumber {border-width: 0 1px 0 1px; text-align: right;}
+tr.middle td.sourceLine {border-width: 0 1px 0 1px; background-color: #F0F0FF;}
+tr.last td.flags {border-width: 0 1px 1px 1px; text-align: right;}
+tr.last td.lineNumber {border-width: 0 1px 1px 1px; text-align: right;}
+tr.last td.sourceLine {border-width: 0 1px 1px 1px; background-color: #F0F0FF;}
+	</style>
+
+	<style type="text/css">
+	body {font: 70% verdana,arial,helvetica; color: #000000}
+p  {margin-top:  3px; line-height: 1.5em}
+h1 {margin-top:  0px; margin-bottom: 6px; font: bold 150% verdana,arial,helvetica}
+h2 {margin-top: 12px; margin-bottom: 6px; font: bold 125% verdana,arial,helvetica}
+h3 {margin-top: 12px; margin-bottom: 6px; font: bold 100% verdana,arial,helvetica}
+h4 {margin-top: 12px; margin-bottom: 6px; font: bold 100% verdana,arial,helvetica}
+.rounded_page{display:block}
+.rounded_page *{display:block; height:1px; overflow:hidden; font-size:.01em; background:#7799DD}
+.rounded_page1{ margin-left:3px; margin-right:3px; padding-left:1px; padding-right:1px; border-left:1px solid #c4d3ef; border-right:1px solid #c4d3ef; background:#99b2e5}
+.rounded_page2{ margin-left:1px; margin-right:1px; padding-right:1px; padding-left:1px; border-left:1px solid #f1f4fa; border-right:1px solid #f1f4fa; background:#90ace3}
+.rounded_page3{ margin-left:1px; margin-right:1px; border-left:1px solid #90ace3; border-right:1px solid #90ace3;}
+.rounded_page4{ border-left:1px solid #c4d3ef; border-right:1px solid #c4d3ef}
+.rounded_page5{ border-left:1px solid #99b2e5; border-right:1px solid #99b2e5}
+.rounded_pagefg{ background:#7799DD}
+.rounded_section{display:block}
+.rounded_section *{display:block; height:1px; overflow:hidden; font-size:.01em; background:#C3D9FF}
+.rounded_section1{ margin-left:3px; margin-right:3px; padding-left:1px; padding-right:1px; border-left:1px solid #e5eefe; border-right:1px solid #e5eefe; background:#d2e2fe}
+.rounded_section2{ margin-left:1px; margin-right:1px; padding-right:1px; padding-left:1px; border-left:1px solid #f9fbfe; border-right:1px solid #f9fbfe; background:#cee0fe}
+.rounded_section3{ margin-left:1px; margin-right:1px; border-left:1px solid #cee0fe; border-right:1px solid #cee0fe;}
+.rounded_section4{ border-left:1px solid #e5eefe; border-right:1px solid #e5eefe}
+.rounded_section5{ border-left:1px solid #d2e2fe; border-right:1px solid #d2e2fe}
+.rounded_sectionfg{ background:#C3D9FF}
+.page-title { color: #FFFFFE; font-weight: bold; font-size: large; margin: 0px 0px 0px 8px; }
+.page-title-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.page-footer { color: #FFFFFE; font-weight: bold; margin-left: 8px}
+.page-footer-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.majorsection-title { color: #FFFFFE; font-weight: bold; margin: 0px 0px 0px 8px; }
+.majorsection-title-details { color: #FFFFFE; font-weight: bold; margin-right: 8px; margin-left: 8px; }
+.majorsection-contents { margin: 0px 0px 15px 16px; }
+.section-title { color: #1F4F8F; font-weight: bold; margin: 0px 0px 0px 6px; }
+.section-title-details { font-weight: bold; margin-left: 6px; margin-right: 6px; }
+.section-contents { margin: 6px 0px 15px 14px; }
+.bodyTable { border: 0px solid #777777; width:100%; border-collapse: collapse; }
+.bodyTable th { border: 1px solid #777777; white-space:nowrap; background-color: #EEEEEE; padding-left: 3px; padding-right: 3px; }
+.bodyTable td { border: 1px solid #777777; vertical-align: top; padding-left: 3px; padding-right: 3px; }
+td[class=emptyborder] { border: 0px solid #777777; padding: 3px 0px 3px 0px; }
+
+	</style>
+
+</head>
+
+<body>
+
+<div>
+		<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+		<div class="rounded_pagefg">
+			<h3 class="majorsection-title">/JoshHack/src/game/Item.java</h3>
+		</div>
+		<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+	</div>
+	<div class="section-contents">
+		<b>Violations: 0 high, 5 medium, 0 low</b>
+	</div>
+	&nbsp;
+	<div>
+		<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+		<div class="rounded_sectionfg">
+			<h4 class="section-title">Violations</h4>
+		</div>
+		<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+	</div>
+	<table>
+	<tr>
+	<td valign="top"><img src="medium_severity.gif" alt="medium"/>
+	</td><td valign="top"><a href="#line11">readObject method missing</a>
+	</td></tr>
+	<tr>
+	<td valign="top"><img src="medium_severity.gif" alt="medium"/>
+	</td><td valign="top"><a href="#line11">&quot;Item&quot; does not override clone()</a>
+	</td></tr>
+	<tr>
+	<td valign="top"><img src="medium_severity.gif" alt="medium"/>
+	</td><td valign="top"><a href="#line31">Mutable type &quot;java.awt.Color&quot; declared as the return type</a>
+	</td></tr>
+	<tr>
+	<td valign="top"><img src="medium_severity.gif" alt="medium"/>
+	</td><td valign="top"><a href="#line146">Mutable type &quot;game.Effect&quot; declared as the return type</a>
+	</td></tr>
+	<tr>
+	<td valign="top"><img src="medium_severity.gif" alt="medium"/>
+	</td><td valign="top"><a href="#line163">Mutable type &quot;java.util.List&quot; declared as the return type</a>
+	</td></tr>
+	</table>
+	&nbsp;
+	<div>
+		<b class="rounded_section"><b class="rounded_section1"><b></b></b><b class="rounded_section2"><b></b></b><b class="rounded_section3"></b><b class="rounded_section4"></b><b class="rounded_section5"></b></b>
+		<div class="rounded_sectionfg">
+			<h4 class="section-title">Source</h4>
+		</div>
+		<b class="rounded_section"><b class="rounded_section5"></b><b class="rounded_section4"></b><b class="rounded_section3"></b><b class="rounded_section2"><b></b></b><b class="rounded_section1"><b></b></b></b>
+	</div>
+	<div class="section-contents">
+		<table width="100%" class="code">
+		<tr class="first">
+		<td class="lineNumber">
+		<a name="line1">1</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		package&nbsp;game;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line2">2</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line3">3</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		import&nbsp;java.awt.Color;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line4">4</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		import&nbsp;java.util.ArrayList;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line5">5</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		import&nbsp;java.util.List;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line6">6</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line7">7</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		//&nbsp;TODO:&nbsp;Auto-generated&nbsp;Javadoc
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line8">8</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line9">9</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;*&nbsp;The&nbsp;Class&nbsp;Item.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line10">10</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line11"><b>11</b></a>
+		</td>
+		<td class="flags" nowrap="nowrap"><img src="medium_severity.gif" alt="medium" title="readObject method missing"/><img src="medium_severity.gif" alt="medium" title="&quot;Item&quot; does not override clone()"/></td>
+		<td class="sourceLine" width="100%">
+		public&nbsp;class&nbsp;<span class="mediumSeverity">Item</span>&nbsp;{
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line12">12</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line13">13</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;glyph.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line14">14</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;char&nbsp;glyph;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line15">15</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line16">16</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line17">17</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Glyph.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line18">18</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line19">19</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;char
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line20">20</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line21">21</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;char&nbsp;glyph()&nbsp;{&nbsp;return&nbsp;glyph;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line22">22</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line23">23</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;color.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line24">24</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;Color&nbsp;color;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line25">25</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line26">26</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line27">27</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Color.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line28">28</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line29">29</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;color
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line30">30</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line31"><b>31</b></a>
+		</td>
+		<td class="flags" nowrap="nowrap"><img src="medium_severity.gif" alt="medium" title="Mutable type &quot;java.awt.Color&quot; declared as the return type"/></td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;<span class="mediumSeverity">Color</span>&nbsp;color()&nbsp;{&nbsp;return&nbsp;color;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line32">32</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line33">33</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;name.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line34">34</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;String&nbsp;name;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line35">35</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line36">36</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line37">37</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Name.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line38">38</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line39">39</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;string
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line40">40</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line41">41</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;name()&nbsp;{&nbsp;return&nbsp;name;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line42">42</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line43">43</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;appearance.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line44">44</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;String&nbsp;appearance;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line45">45</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line46">46</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line47">47</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Appearance.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line48">48</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line49">49</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;string
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line50">50</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line51">51</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;appearance()&nbsp;{&nbsp;return&nbsp;appearance;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line52">52</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line53">53</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;food&nbsp;value.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line54">54</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;int&nbsp;foodValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line55">55</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line56">56</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line57">57</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Food&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line58">58</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line59">59</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;int
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line60">60</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line61">61</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;foodValue()&nbsp;{&nbsp;return&nbsp;foodValue;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line62">62</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line63">63</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line64">64</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Modify&nbsp;food&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line65">65</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line66">66</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;amount&nbsp;the&nbsp;amount
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line67">67</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line68">68</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;modifyFoodValue(int&nbsp;amount)&nbsp;{&nbsp;foodValue&nbsp;+=&nbsp;amount;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line69">69</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line70">70</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;attack&nbsp;value.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line71">71</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;int&nbsp;attackValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line72">72</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line73">73</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line74">74</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Attack&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line75">75</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line76">76</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;int
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line77">77</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line78">78</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;attackValue()&nbsp;{&nbsp;return&nbsp;attackValue;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line79">79</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line80">80</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line81">81</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Modify&nbsp;attack&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line82">82</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line83">83</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;amount&nbsp;the&nbsp;amount
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line84">84</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line85">85</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;modifyAttackValue(int&nbsp;amount)&nbsp;{&nbsp;attackValue&nbsp;+=&nbsp;amount;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line86">86</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line87">87</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;defense&nbsp;value.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line88">88</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;int&nbsp;defenseValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line89">89</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line90">90</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line91">91</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Defense&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line92">92</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line93">93</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;int
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line94">94</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line95">95</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;defenseValue()&nbsp;{&nbsp;return&nbsp;defenseValue;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line96">96</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line97">97</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line98">98</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Modify&nbsp;defense&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line99">99</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line100">100</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;amount&nbsp;the&nbsp;amount
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line101">101</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line102">102</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;modifyDefenseValue(int&nbsp;amount)&nbsp;{&nbsp;defenseValue&nbsp;+=&nbsp;amount;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line103">103</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line104">104</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;thrown&nbsp;attack&nbsp;value.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line105">105</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;int&nbsp;thrownAttackValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line106">106</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line107">107</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line108">108</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Thrown&nbsp;attack&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line109">109</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line110">110</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;int
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line111">111</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line112">112</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;thrownAttackValue()&nbsp;{&nbsp;return&nbsp;thrownAttackValue;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line113">113</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line114">114</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line115">115</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Modify&nbsp;thrown&nbsp;attack&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line116">116</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line117">117</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;amount&nbsp;the&nbsp;amount
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line118">118</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line119">119</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;modifyThrownAttackValue(int&nbsp;amount)&nbsp;{&nbsp;thrownAttackValue&nbsp;+=&nbsp;amount;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line120">120</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line121">121</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;ranged&nbsp;attack&nbsp;value.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line122">122</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;int&nbsp;rangedAttackValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line123">123</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line124">124</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line125">125</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Ranged&nbsp;attack&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line126">126</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line127">127</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;int
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line128">128</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line129">129</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;int&nbsp;rangedAttackValue()&nbsp;{&nbsp;return&nbsp;rangedAttackValue;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line130">130</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line131">131</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line132">132</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Modify&nbsp;ranged&nbsp;attack&nbsp;value.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line133">133</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line134">134</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;amount&nbsp;the&nbsp;amount
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line135">135</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line136">136</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;modifyRangedAttackValue(int&nbsp;amount)&nbsp;{&nbsp;rangedAttackValue&nbsp;+=&nbsp;amount;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line137">137</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line138">138</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;quaff&nbsp;effect.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line139">139</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;Effect&nbsp;quaffEffect;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line140">140</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line141">141</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line142">142</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Quaff&nbsp;effect.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line143">143</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line144">144</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;effect
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line145">145</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line146"><b>146</b></a>
+		</td>
+		<td class="flags" nowrap="nowrap"><img src="medium_severity.gif" alt="medium" title="Mutable type &quot;game.Effect&quot; declared as the return type"/></td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;<span class="mediumSeverity">Effect</span>&nbsp;quaffEffect()&nbsp;{&nbsp;return&nbsp;quaffEffect;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line147">147</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line148">148</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line149">149</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Sets&nbsp;the&nbsp;quaff&nbsp;effect.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line150">150</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line151">151</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;effect&nbsp;the&nbsp;new&nbsp;quaff&nbsp;effect
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line152">152</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line153">153</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;setQuaffEffect(Effect&nbsp;effect)&nbsp;{&nbsp;this.quaffEffect&nbsp;=&nbsp;effect;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line154">154</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line155">155</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**&nbsp;The&nbsp;written&nbsp;spells.&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line156">156</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;private&nbsp;List&lt;Spell&gt;&nbsp;writtenSpells;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line157">157</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line158">158</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line159">159</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Written&nbsp;spells.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line160">160</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line161">161</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;list
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line162">162</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line163"><b>163</b></a>
+		</td>
+		<td class="flags" nowrap="nowrap"><img src="medium_severity.gif" alt="medium" title="Mutable type &quot;java.util.List&quot; declared as the return type"/></td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;<span class="mediumSeverity">List&lt;Spell&gt;</span>&nbsp;writtenSpells()&nbsp;{&nbsp;return&nbsp;writtenSpells;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line164">164</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line165">165</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line166">166</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Adds&nbsp;the&nbsp;written&nbsp;spell.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line167">167</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line168">168</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;name&nbsp;the&nbsp;name
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line169">169</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;manaCost&nbsp;the&nbsp;mana&nbsp;cost
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line170">170</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;effect&nbsp;the&nbsp;effect
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line171">171</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line172">172</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;addWrittenSpell(String&nbsp;name,&nbsp;int&nbsp;manaCost,&nbsp;Effect&nbsp;effect){
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line173">173</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writtenSpells.add(new&nbsp;Spell(name,&nbsp;manaCost,&nbsp;effect));
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line174">174</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line175">175</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line176">176</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line177">177</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Instantiates&nbsp;a&nbsp;new&nbsp;item.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line178">178</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line179">179</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;glyph&nbsp;the&nbsp;glyph
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line180">180</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;color&nbsp;the&nbsp;color
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line181">181</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;name&nbsp;the&nbsp;name
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line182">182</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@param&nbsp;appearance&nbsp;the&nbsp;appearance
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line183">183</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line184">184</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;Item(char&nbsp;glyph,&nbsp;Color&nbsp;color,&nbsp;String&nbsp;name,&nbsp;String&nbsp;appearance){
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line185">185</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.glyph&nbsp;=&nbsp;glyph;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line186">186</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.color&nbsp;=&nbsp;color;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line187">187</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.name&nbsp;=&nbsp;name;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line188">188</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.appearance&nbsp;=&nbsp;appearance&nbsp;==&nbsp;null&nbsp;?&nbsp;name&nbsp;:&nbsp;appearance;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line189">189</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.thrownAttackValue&nbsp;=&nbsp;1;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line190">190</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.writtenSpells&nbsp;=&nbsp;new&nbsp;ArrayList&lt;Spell&gt;();
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line191">191</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;}
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line192">192</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line193">193</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;/**
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line194">194</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Details.
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line195">195</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line196">196</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;the&nbsp;string
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line197">197</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;*/
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line198">198</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;details()&nbsp;{
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line199">199</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;details&nbsp;=&nbsp;&quot;&quot;;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line200">200</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line201">201</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(attackValue&nbsp;!=&nbsp;0)
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line202">202</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details&nbsp;+=&nbsp;&quot;&nbsp;&nbsp;attack:&quot;&nbsp;+&nbsp;attackValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line203">203</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line204">204</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(thrownAttackValue&nbsp;!=&nbsp;1)
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line205">205</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details&nbsp;+=&nbsp;&quot;&nbsp;&nbsp;thrown:&quot;&nbsp;+&nbsp;thrownAttackValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line206">206</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line207">207</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(rangedAttackValue&nbsp;&gt;&nbsp;0)
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line208">208</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details&nbsp;+=&nbsp;&quot;&nbsp;&nbsp;ranged:&quot;&nbsp;+&nbsp;rangedAttackValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line209">209</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line210">210</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(defenseValue&nbsp;!=&nbsp;0)
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line211">211</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details&nbsp;+=&nbsp;&quot;&nbsp;&nbsp;defense:&quot;&nbsp;+&nbsp;defenseValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line212">212</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line213">213</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(foodValue&nbsp;!=&nbsp;0)
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line214">214</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details&nbsp;+=&nbsp;&quot;&nbsp;&nbsp;food:&quot;&nbsp;+&nbsp;foodValue;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line215">215</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line216">216</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;details;
+		</td>
+		</tr>
+		<tr class="middle">
+		<td class="lineNumber">
+		<a name="line217">217</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		&nbsp;&nbsp;&nbsp;}
+		</td>
+		</tr>
+		<tr class="last">
+		<td class="lineNumber">
+		<a name="line218">218</a>
+		</td>
+		<td class="flags">
+		</td>
+		<td class="sourceLine" width="100%">
+		}
+		</td>
+		</tr>
+		</table>
+	</div>
+	<div>
+		<b class="rounded_page"><b class="rounded_page1"><b></b></b><b class="rounded_page2"><b></b></b><b class="rounded_page3"></b><b class="rounded_page4"></b><b class="rounded_page5"></b></b>
+		<div class="rounded_pagefg">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" ><tr><td valign="middle">
+			<span class="page-footer"></span>
+			</td><td align="right" valign="middle">
+			<span class="page-footer-details">Powered by <span title="0.0.0, UNKNOWN">CodePro Server</span></span></td></tr></table>
+		</div>
+		<b class="rounded_page"><b class="rounded_page5"></b><b class="rounded_page4"></b><b class="rounded_page3"></b><b class="rounded_page2"><b></b></b><b class="rounded_page1"><b></b></b></b>
+	</div>
+
+</body>
+
+</html>
